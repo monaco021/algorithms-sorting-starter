@@ -8,7 +8,16 @@ function swap(arr, index1, index2) {
 }
 
 function selectionSort(list) {
-  // your code here
+  for (let i = 0; i < list.length; i++) {
+    let minvalue = i;
+    for (let j = i + 1; j < list.length; j++) {
+      if (list[minvalue] > list[j]) {
+        minvalue = j;
+      }
+    }
+    swap(list, i, minvalue);
+  }
+  return list;
 }
 
 module.exports = {

@@ -2,7 +2,9 @@
 
 // Implement swap without looking at bubble sort
 function swap(arr, index1, index2) {
-  // your code here
+  let temp = arr[index1];
+  arr[index1] = arr[index2];
+  arr[index2] = temp;
 }
 
 function selectionSort(list) {
